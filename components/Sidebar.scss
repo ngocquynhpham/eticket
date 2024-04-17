@@ -1,0 +1,27 @@
+.sidebar {
+  @apply w-64 min-h-screen max-h-screen;
+  background-color: hsla(0, 0%, 100%, 1);
+  border-right: 1px solid hsla(0, 0%, 91%, 1);
+  &__head {
+    @apply flex justify-center items-center gap-1 h-14 py-1 px-2 w-full text-primary;
+  }
+  &__body {
+    @apply flex flex-col gap-4 overflow-auto text-text_10 px-4;
+    height: calc(100dvh - 185px);
+    .itemMenu {
+      @apply flex gap-4 py-2 px-4 rounded-sm items-center hover:text-primary cursor-pointer;
+      &.active{
+        @apply bg-primary text-white hover:text-white;
+      }
+    }
+  }
+  &__foot {
+    @apply flex flex-col gap-1 justify-center items-center px-4;
+    .btn-create{
+        @apply h-10 py-1 px-2 w-full flex justify-center items-center gap-2 text-white text-sm bg-primary rounded-sm hover:opacity-90; 
+    }
+    .version {
+        @apply h-10 py-1 px-2 w-full flex justify-center items-center text-primary italic text-sm;
+    }
+  }
+}
