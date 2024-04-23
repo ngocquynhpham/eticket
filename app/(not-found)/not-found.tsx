@@ -46,11 +46,11 @@ const HelloWorld = () => {
           target="_blank"
           className="button first"
         >
-          <button>Connect with me</button>
+          <button className="btn">Connect with me</button>
           <span className="span"></span>
         </a>
         <Link href={"/"} className="button sec">
-          <button>
+          <button className="btn">
             <Undo2 />
           </button>
           <span className="span"></span>
