@@ -13,6 +13,13 @@ export async function getListTicket() {
       }
    });
 }
+export async function getTicketDetail(idTicket: number) {
+   return await prisma.ticket.findUnique({
+      where: {
+         id: idTicket
+      }
+   });
+}
 export async function createTicket(ticket: any) {
    let user = await getCurrentUser();
    let user_id = user?.id;
