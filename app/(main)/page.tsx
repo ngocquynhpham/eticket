@@ -1,9 +1,10 @@
 import React from 'react'
+import { ChartBar } from './(dashboard)/ChartBar'
 
 const Dashboard = () => {
   return (
     <div className='body-main'>
-      dashboard
+      <ChartBar />
     </div>
   )
 }
