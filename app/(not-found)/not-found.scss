@@ -108,18 +108,26 @@ body:has(.draft) {
   .button:hover > button {
     transform: translateY(5px);
   }
-  .button.third {
+  .button.first {
     bottom: 40%;
     right: 10%;
   }
+  .button.sec {
+    top: 10%;
+    left: 5%;
+    button{
+      width: 50px ;
+    }
+
+  }
   
-  .button.third > button {
+  .button.first > button {
     background-color: hsla(156, 51%, 14%, 5%);
     box-shadow: 0px -3px 15px 0px hsl(156, 51%, 14%) inset;
     color: hsl(156, 51%, 75%);
   }
   
-  .button.third > span {
+  .button.first > span {
     background-color: hsla(156, 51%, 30%, 50%);
   }
   @media screen and (max-width: 1000px) {
@@ -129,7 +137,7 @@ body:has(.draft) {
     .title > span {
       font-size: 1rem !important;
     }
-    .button.third {
+    .button.first {
       bottom: 10%;
       right: 50%;
     }

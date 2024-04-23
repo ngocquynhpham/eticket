@@ -1,5 +1,7 @@
 import React from "react";
 import "./not-found.scss";
+import { Undo2 } from "lucide-react";
+import Link from "next/link";
 const HelloWorld = () => {
   return (
     <div className="draft">
@@ -38,14 +40,22 @@ const HelloWorld = () => {
         <p>Hello World,</p>
         <span>It seems you are lost, please come visit me!</span>
       </div>
-      <a
-        href="https://ngocquynhpham.github.io/"
-        target="_blank"
-        className="button third"
-      >
-        <button>Connect with me</button>
-        <span className="span"></span>
-      </a>
+      <div>
+        <a
+          href="https://ngocquynhpham.github.io/"
+          target="_blank"
+          className="button first"
+        >
+          <button>Connect with me</button>
+          <span className="span"></span>
+        </a>
+        <Link href={"/"} className="button sec">
+          <button>
+            <Undo2 />
+          </button>
+          <span className="span"></span>
+        </Link>
+      </div>
     </div>
   );
 };
