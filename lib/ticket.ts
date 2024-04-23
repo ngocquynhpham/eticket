@@ -17,6 +17,13 @@ export async function getTicketDetail(idTicket: number) {
    return await prisma.ticket.findUnique({
       where: {
          id: idTicket
+      },
+      include: {
+         status: true,
+         user: true,
+         category: true,
+         department: true,
+         ticketType: true,
       }
    });
 }

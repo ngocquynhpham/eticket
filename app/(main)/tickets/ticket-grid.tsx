@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, FileText, Ticket as TicketICon } from "lucide-react";
 import { StatusTicket, Ticket } from "@prisma/client";
 import { formatDate, formatTime } from "@/utils/datetime";
+import { redirect, useRouter } from "next/navigation";
 
 const TicketGrid = ({
   data,
@@ -18,7 +19,10 @@ const TicketGrid = ({
   data: (Ticket & { status: StatusTicket })[];
 }) => {
   let tickets = data;
-  console.log("status", status);
+  const router = useRouter()
+  const handleClick = (id: number) => {
+    router.push(`/ticket/${id}`);
+  };
   return (
     <>
       <div className="flex justify-center items-center w-full gap-2 my-2">
@@ -75,7 +79,12 @@ const TicketGrid = ({
                 )}
               </CardContent>
               <CardFooter>
-                <Button className="w-full gap-2">
+                <Button
+                  onClick={() => {
+                    handleClick(ticket.id);
+                  }}
+                  className="w-full gap-2"
+                >
                   See detail <ArrowRight strokeWidth={2} size={20} />
                 </Button>
               </CardFooter>

@@ -17,7 +17,13 @@ import { UserButton } from "@clerk/nextjs";
 const Sidebar = () => {
   const listMenu = [
     { id: 0, name: "Dashboard", icon: <LayoutDashboard />, url: "/" }, // Nếu Admin sẽ thấy
-    { id: 1, name: "My Tickets", icon: <Ticket />, url: "/tickets" }, // End user sẽ thấy: Ds + Dashboard
+    {
+      id: 1,
+      name: "My Tickets",
+      icon: <Ticket />,
+      url: "/tickets",
+      hasChild: true,
+    }, // End user sẽ thấy: Ds + Dashboard
     { id: 2, name: "Need Handle", icon: <Ticket />, url: "/need-handle" }, // End user sẽ thấy: Ds + Dashboard
     { id: 3, name: "Setting", icon: <Settings />, url: "/setting" }, // Nếu Admin sẽ thấy
   ];
@@ -32,7 +38,12 @@ const Sidebar = () => {
           return (
             <Link
               href={item.url}
-              className={`itemMenu ${pathname === item.url ? "active" : ""}`}
+              className={`itemMenu ${
+                pathname === item.url ||
+                (pathname.includes("ticket/") && item.hasChild)
+                  ? "active"
+                  : ""
+              }`}
               key={item.id}
             >
               <span>{item.icon}</span>
