@@ -13,7 +13,7 @@ const chartConfig: any = {
   height: 240,
   series: [
     {
-      name: "Sales",
+      name: "Tickets",
       data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
     },
   ],
@@ -29,7 +29,7 @@ const chartConfig: any = {
     dataLabels: {
       enabled: false,
     },
-    colors: ["#020617"],
+    colors: ["#6c47ff"],
     plotOptions: {
       bar: {
         columnWidth: "40%",
@@ -45,7 +45,7 @@ const chartConfig: any = {
       },
       labels: {
         style: {
-          colors: "#616161",
+          colors: "#6c47ff",
           fontSize: "12px",
           fontFamily: "inherit",
           fontWeight: 400,
@@ -66,7 +66,7 @@ const chartConfig: any = {
     yaxis: {
       labels: {
         style: {
-          colors: "#616161",
+          colors: "#6c47ff",
           fontSize: "12px",
           fontFamily: "inherit",
           fontWeight: 400,
@@ -111,11 +111,11 @@ export function ChartBar() {
           color="transparent"
           className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
         >
-          <div className="w-max rounded-lg bg-gray-900 p-5 text-white">
+          <div className="w-max rounded-lg bg-primary p-5 text-white">
             <SquareStack className="h-6 w-6" />
           </div>
           <div>
-            <h6 color="blue-gray">Bar Chart</h6>
+            <h6 color="blue-gray">Total ticket by month</h6>
             <p color="gray" className="max-w-sm font-normal">
               Visualize your data in a simple way using the
             </p>
