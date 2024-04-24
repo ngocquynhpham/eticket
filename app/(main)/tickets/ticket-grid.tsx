@@ -29,12 +29,12 @@ const TicketGrid = ({
         <TicketICon strokeWidth={2.5} size={30} className="text-primary" />
         <h1 className="text-primary font-bold text-xl">My Tickets</h1>
       </div>
-      <div className="bg-none p-8 grid gap-8 grid-cols-1 sm:grid-cols-3 mx-auto">
+      <div className="overflow-y-auto h-[calc(100dvh-60px)] bg-none p-2 sm:p-8 grid gap-4 sm:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 mx-auto">
         {tickets.map((ticket, index: any) => {
           console.log("ticket.content ", ticket.subject, !!ticket.content);
           return (
             <Card key={index} className={"col-span-1"}>
-              <CardHeader>
+              <CardHeader className="p-3 sm:p-6">
                 <CardTitle className="flex gap-1 items-center text-primary text-md">
                   <FileText size={18} />
                   {ticket.subject.toUpperCase()}
@@ -43,7 +43,7 @@ const TicketGrid = ({
                   ticket.createdAt
                 )} at ${formatTime(ticket.createdAt)}`}</CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col gap-4">
+              <CardContent className="flex flex-col gap-2 sm:gap-4 p-3 sm:p-6">
                 <div className="flex items-center space-x-4 rounded-md border p-4">
                   <div className="flex-1 space-y-1">
                     <p className="text-sm font-medium leading-none">
@@ -78,7 +78,7 @@ const TicketGrid = ({
                   </span>
                 )}
               </CardContent>
-              <CardFooter>
+              <CardFooter className="p-3 sm:p-6">
                 <Button
                   onClick={() => {
                     handleClick(ticket.id);

@@ -19,19 +19,18 @@ const Sidebar = () => {
     { id: 0, name: "Dashboard", icon: <LayoutDashboard />, url: "/" }, // Nếu Admin sẽ thấy
     {
       id: 1,
-      name: "My Tickets",
+      name: "Tickets",
       icon: <Ticket />,
       url: "/tickets",
       hasChild: true,
     }, // End user sẽ thấy: Ds + Dashboard
-    { id: 2, name: "Need Handle", icon: <Ticket />, url: "/need-handle" }, // End user sẽ thấy: Ds + Dashboard
-    { id: 3, name: "Setting", icon: <Settings />, url: "/setting" }, // Nếu Admin sẽ thấy
+    { id: 2, name: "Setting", icon: <Settings />, url: "/setting" }, // Nếu Admin sẽ thấy
   ];
   const pathname = usePathname();
   return (
-    <div className="sidebar">
+    <div className="sidebar w-20 sm:w-full">
       <div className="sidebar__head">
-        <TicketCheck /> Helpdesk
+        <TicketCheck /> <span className="hidden sm:inline">Helpdesk</span>
       </div>
       <div className="sidebar__body">
         {listMenu.map((item, index) => {
@@ -47,7 +46,7 @@ const Sidebar = () => {
               key={item.id}
             >
               <span>{item.icon}</span>
-              <span>{item.name}</span>
+              <span className="hidden sm:inline">{item.name}</span>
             </Link>
           );
         })}
@@ -55,10 +54,10 @@ const Sidebar = () => {
       <div className="sidebar__foot">
         <Link href={"/create-ticket"} className="btn-create">
           <CirclePlus />
-          Create New
+         <span className="hidden sm:inline"> Create New</span>
         </Link>
         <UserButton />
-        <span className="version">@HelpDesk v.1.1.1</span>
+        <span className="hidden sm:inline"><span className="version">@HelpDesk v.1.1.1</span></span>
       </div>
     </div>
   );
