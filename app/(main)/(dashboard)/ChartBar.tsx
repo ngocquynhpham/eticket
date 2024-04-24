@@ -116,9 +116,6 @@ export function ChartBar() {
           </div>
           <div>
             <h6 color="blue-gray">Total ticket by month</h6>
-            <p color="gray" className="max-w-sm font-normal">
-              Visualize your data in a simple way using the
-            </p>
           </div>
         </CardHeader>
         <CardContent className="px-2 pb-0">
