@@ -31,7 +31,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar__head">
-        <TicketCheck /> WinTicket
+        <TicketCheck /> Helpdesk
       </div>
       <div className="sidebar__body">
         {listMenu.map((item, index) => {

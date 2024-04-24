@@ -19,7 +19,7 @@ const TermsCondition = () => {
       <div className="flex flex-col gap-2 w-full">
         <h3 className="font-bold">Conditions of carriage</h3>
         <p>
-          WinTicket applies some security conditions apply to ensure the safety
+          Helpdesk applies some security conditions apply to ensure the safety
           of supported customers. Please, see more details{" "}
           <Link className="text-primary" href={"/"}>
             here

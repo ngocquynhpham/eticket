@@ -29,6 +29,9 @@ const Setting = () => {
         <TabsContent value="department">
           <DepartmentPage />
         </TabsContent>
+        <TabsContent value="category">
+          <CategoryPage />
+        </TabsContent>
         <TabsContent value="status">
           <TicketStatus />
         </TabsContent>
