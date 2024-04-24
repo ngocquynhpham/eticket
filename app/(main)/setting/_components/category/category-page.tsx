@@ -5,7 +5,7 @@ import { getListCategory } from '@/lib/category'
 const CategoryPage = async () => {
   let listCategory = await getListCategory();
   return (
-    <div className="w-full p-4">
+    <div className="w-full p-2 sm:p-4">
       <CategoryTable data={listCategory}/>
     </div>
   )

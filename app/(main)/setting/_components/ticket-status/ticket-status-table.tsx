@@ -60,7 +60,7 @@ const TickerStatusTable = ({data}:{data:StatusTicket[]}) => {
   }
   return (
     <>
-    <div className="flex justify-center items-center w-full gap-2 my-2">
+    <div className="hidden sm:flex justify-center items-center w-full gap-2 my-2">
       <Orbit strokeWidth={2.5} size={30} className="text-primary" />
       <h1 className="text-primary font-bold text-xl">List Status Ticket</h1>
     </div>
@@ -71,12 +71,13 @@ const TickerStatusTable = ({data}:{data:StatusTicket[]}) => {
         setShow(show);
       }}
     >
-      <DialogTrigger asChild>
-        <Button type="button" className="my-4">
-          <CirclePlus className="mr-2" />
-          Create New
-        </Button>
-      </DialogTrigger>
+       <DialogTrigger asChild>
+          <Button type="button" className="my-1 sm:my-4">
+            <CirclePlus className="mr-0 sm:mr-2" />
+            <span className="hidden sm:inline">Create New</span>
+          </Button>
+        </DialogTrigger>
+
 
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

@@ -84,7 +84,7 @@ const DepartmentTable = ({ data }: { data: Department[] }) => {
 }
   return (
     <>
-      <div className="flex justify-center items-center w-full gap-2 my-2">
+      <div className="hidden sm:flex justify-center items-center w-full gap-2 my-2">
         <Building2 strokeWidth={2.5} size={30} className="text-primary" />
         <h1 className="text-primary font-bold text-xl">List Department</h1>
       </div>
@@ -95,10 +95,10 @@ const DepartmentTable = ({ data }: { data: Department[] }) => {
           setShow(show);
         }}
       >
-        <DialogTrigger asChild>
-          <Button type="button" className="my-4">
-            <CirclePlus className="mr-2" />
-            Create New
+          <DialogTrigger asChild>
+          <Button type="button" className="my-1 sm:my-4">
+            <CirclePlus className="mr-0 sm:mr-2" />
+            <span className="hidden sm:inline">Create New</span>
           </Button>
         </DialogTrigger>
 

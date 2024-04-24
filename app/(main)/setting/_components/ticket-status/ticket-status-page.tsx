@@ -6,7 +6,7 @@ const TicketStatus = async() => {
     let listStatus =  await getListStatus();
 
   return (
-    <div className="w-full p-4">
+    <div className="w-full p-2 sm:p-4">
       <TickerStatusTable data={listStatus}/>
     </div>
   )
