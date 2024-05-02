@@ -7,7 +7,7 @@ import TicketDetail from "../ticket/[id]/page";
 const TicketsPage = async () => {
   let tickets = await actionGetTicketList();
   return (
-    <div className="w-full p-2 sm:p-4">
+    <div className="body-main w-full p-2 sm:p-4">
     <TicketGrid data={tickets}/>
   </div>
   );

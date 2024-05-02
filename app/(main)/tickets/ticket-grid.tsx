@@ -43,7 +43,7 @@ const TicketGrid = ({
                   ticket.createdAt
                 )} at ${formatTime(ticket.createdAt)}`}</CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col gap-2 sm:gap-4 p-3 sm:p-6">
+              <CardContent className="flex flex-col gap-2 sm:gap-4 p-2 sm:p-3">
                 <div className="flex items-center space-x-4 rounded-md border p-4">
                   <div className="flex-1 space-y-1">
                     <p className="text-sm font-medium leading-none">
@@ -78,7 +78,7 @@ const TicketGrid = ({
                   </span>
                 )}
               </CardContent>
-              <CardFooter className="p-3 sm:p-6">
+              <CardFooter className="p-2 sm:p-3">
                 <Button
                   onClick={() => {
                     handleClick(ticket.id);
