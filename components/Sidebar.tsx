@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import {
   ArrowRight,
   CirclePlus,
@@ -30,7 +31,8 @@ const Sidebar = () => {
   return (
     <div className="sidebar w-20 sm:w-full">
       <div className="sidebar__head">
-        <TicketCheck /> <span className="hidden sm:inline">Helpdesk</span>
+        <Image src="/imgs/logo.svg" width={40} height={40} alt="IT Helpdesk" />{" "}
+        <span className="hidden sm:inline">Helpdesk</span>
       </div>
       <div className="sidebar__body">
         {listMenu.map((item, index) => {
@@ -54,10 +56,12 @@ const Sidebar = () => {
       <div className="sidebar__foot">
         <Link href={"/create-ticket"} className="btn-create">
           <CirclePlus />
-         <span className="hidden sm:inline"> Create New</span>
+          <span className="hidden sm:inline"> Create New</span>
         </Link>
         <UserButton />
-        <span className="hidden sm:inline"><span className="version">@HelpDesk v.1.1.1</span></span>
+        <span className="hidden sm:inline">
+          <span className="version">@HelpDesk v.1.1.1</span>
+        </span>
       </div>
     </div>
   );

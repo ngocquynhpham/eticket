@@ -1,11 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import { Scale } from "lucide-react";
+import { ArrowLeft, Scale } from "lucide-react";
 import Link from "next/link";
 
 const TermsCondition = () => {
   return (
     <div className="p-4 flex flex-col items-center gap-6">
+       <Link className="flex gap-4 items-center w-full" href="/create-ticket">
+       <ArrowLeft />
+        <span className="hidden sm:inline">Back</span>
+      </Link>
       <div className="flex justify-center items-center w-full gap-2 my-2">
         <Scale strokeWidth={2.5} size={30} className="text-primary" />
         <h1 className="text-primary font-bold text-xl">Terms & Condition</h1>

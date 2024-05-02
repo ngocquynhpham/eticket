@@ -16,7 +16,7 @@ const TicketDetail = async ({ params }: { params: { id: string } }) => {
   return (
     <div className="flex flex-col items-center w-full py-4 px-8">
       <div className="flex w-full gap-2">
-        <Link href={"/tickets"} className="flex gap-2 items-center items-center">
+        <Link href={"/tickets"} className="flex gap-2 items-center">
           <Undo2 strokeWidth={2.5} size={18} className="text-primary" />{" "}
           <Label className="text-primary cursor-pointer">Back</Label>
         </Link>
